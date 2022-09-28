@@ -1,0 +1,41 @@
+﻿@page
+@model doktor_hasta.Pages.HastaYonetimSistemModel
+@{
+}
+
+<br />
+<h2>Hasta Yönetim Sistemine Hoşgeldiniz </h2>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th>DoktorID</th>
+        <th>DoktorName</th>
+        <th>DoktorSurname</th>
+        <th>DoktorBranch</th>
+        <th>Action</th>
+
+      </tr>
+    </thead>
+    <tbody>
+@foreach ( var Doktor in Model.listHastaYonetimInfo)
+{
+    
+
+        <tr>
+            <td>@Doktor.DoktorID</td>
+            <td>@Doktor.DoktorName</td>
+            <td>@Doktor.DoktorSurname</td>
+            <td>@Doktor.DoktorBranch</td>
+            <td>
+                <button type="button" class="btn">Detay
+
+
+
+
+                </button>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

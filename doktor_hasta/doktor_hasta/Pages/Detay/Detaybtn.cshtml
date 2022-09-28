@@ -1,0 +1,33 @@
+﻿@page
+@model doktor_hasta.Pages.Detay.DetaybtnModel
+@{
+}
+
+<table class="table">
+    <thead>
+      <tr>
+
+        <th>TedaviID</th>
+        <th>TedaviName</th>
+        <th>TedaviPrice</th>
+        
+        
+
+      </tr>
+    </thead>
+    <tbody>
+@foreach ( var Tedavi in Model.listHastaYonetimInfo)
+{
+    
+
+        <tr>
+            <td>@Tedavi.TedaviID</td>
+            <td>@Tedavi.TedaviName</td>
+            <td>@Tedavi.TedaviPrice</td>
+            
+                <a class="btn btn-primary btn-sm" href="/HastaYonetimSistemi/Detay?id=">Detay</a>
+            
+        </tr>
+}
+    </tbody>
+</table>
